@@ -1,4 +1,5 @@
 using Guna.UI2.WinForms;
+using Microsoft.VisualBasic;
 
 namespace MoneySplitter
 {
@@ -12,7 +13,7 @@ namespace MoneySplitter
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-           
+            SetTextBoxPlaceholders();
             this.WindowState = FormWindowState.Maximized;
             
         }
@@ -23,6 +24,10 @@ namespace MoneySplitter
             textBoxRepeatPassword.SetPlaceholderText<TextBox>("Повторите пароль");
         }
 
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 
     public static class TextBoxExtentions
