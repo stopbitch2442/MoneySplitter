@@ -12,8 +12,4 @@
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MoneySplitterApi\MoneySplitterApi.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneySplitterWinForm", "MoneySplitter\MoneySplitterWinForm.csproj", "{E8358F13-4545-417A-B3D0-148FF34B5C1B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneySplitterApi", "MoneySplitterApi\MoneySplitterApi.csproj", "{B9A430CE-BD91-4740-BB27-BD27428277F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneySplitterWinForm", "MoneySplitter\MoneySplitterWinForm.csproj", "{E8358F13-4545-417A-B3D0-148FF34B5C1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{E8358F13-4545-417A-B3D0-148FF34B5C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8358F13-4545-417A-B3D0-148FF34B5C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8358F13-4545-417A-B3D0-148FF34B5C1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B9A430CE-BD91-4740-BB27-BD27428277F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B9A430CE-BD91-4740-BB27-BD27428277F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B9A430CE-BD91-4740-BB27-BD27428277F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9A430CE-BD91-4740-BB27-BD27428277F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
