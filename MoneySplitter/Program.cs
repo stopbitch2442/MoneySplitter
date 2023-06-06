@@ -1,3 +1,5 @@
+using MoneySplitterWinForm;
+
 namespace MoneySplitter
 {
     internal static class Program

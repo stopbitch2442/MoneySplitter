@@ -1,0 +1,73 @@
+﻿@model MoneySplitterApi.Models.Debts
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>Debts</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label"></label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOwed" class="control-label"></label>
+                <input asp-for="DateOwed" class="form-control" />
+                <span asp-validation-for="DateOwed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeadLine" class="control-label"></label>
+                <input asp-for="DeadLine" class="form-control" />
+                <span asp-validation-for="DeadLine" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsPaid" /> @Html.DisplayNameFor(model => model.IsPaid)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Creditor" class="control-label"></label>
+                <input asp-for="Creditor" class="form-control" />
+                <span asp-validation-for="Creditor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Debtor" class="control-label"></label>
+                <input asp-for="Debtor" class="form-control" />
+                <span asp-validation-for="Debtor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>
