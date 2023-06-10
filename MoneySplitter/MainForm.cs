@@ -21,5 +21,10 @@ namespace MoneySplitterWinForm
         {
             Application.Exit();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            uC_Ledger1.Visible = true;
+        }
     }
 }

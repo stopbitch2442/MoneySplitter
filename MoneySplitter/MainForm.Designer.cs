@@ -41,6 +41,7 @@
             this.btn_Debt = new Guna.UI2.WinForms.Guna2Button();
             this.uC_Debts1 = new MoneySplitterWinForm.UC.UC_Debts();
             this.btn_Exit = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.uC_Ledger1 = new MoneySplitterWinForm.UC.UC_Ledger();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +97,8 @@
             this.guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             this.guna2Button1.Size = new System.Drawing.Size(315, 105);
             this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Долги";
+            this.guna2Button1.Text = "Приход/Расход";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btn_Debt
             // 
@@ -150,12 +152,24 @@
             this.btn_Exit.TabIndex = 2;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
+            // uC_Ledger1
+            // 
+            this.uC_Ledger1.BackColor = System.Drawing.Color.White;
+            this.uC_Ledger1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uC_Ledger1.Location = new System.Drawing.Point(342, 209);
+            this.uC_Ledger1.Margin = new System.Windows.Forms.Padding(4);
+            this.uC_Ledger1.Name = "uC_Ledger1";
+            this.uC_Ledger1.Size = new System.Drawing.Size(3124, 1494);
+            this.uC_Ledger1.TabIndex = 3;
+            this.uC_Ledger1.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(1772, 832);
+            this.Controls.Add(this.uC_Ledger1);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.uC_Debts1);
             this.Controls.Add(this.panel1);
@@ -179,5 +193,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private UC.UC_Debts uC_Debts1;
         private Guna.UI2.WinForms.Guna2CircleButton btn_Exit;
+        private UC.UC_Ledger uC_Ledger1;
     }
 }
