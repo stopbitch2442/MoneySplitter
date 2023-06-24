@@ -10,13 +10,5 @@
             public bool IsPaid { get; set; }
             public string Creditor { get; set; }
             public string Debtor { get; set; }
-
-            List<string> CreditorList = new List<string>()
-            {
-            };
-
-            List<string> DebtorList = new List<string>()
-            {
-            };
         }
     }

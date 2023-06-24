@@ -9,6 +9,7 @@ namespace MoneySplitterApi.Models
         {
         }
         public DbSet<Debts> Debts { get; set; }
+        public DbSet<Ledgers> Ledgers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

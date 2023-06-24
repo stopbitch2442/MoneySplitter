@@ -35,6 +35,7 @@ namespace MoneySplitterWinForm
 
         private async void btn_AddDebt_Click(object sender, EventArgs e)
         {
+            ReturnRightType returnDecimal = new ReturnRightType();
             // Проверка, что все поля заполнены
             if (textbox_Description == null || string.IsNullOrEmpty(textbox_Description.Text) ||
             textbox_Amount == null || string.IsNullOrEmpty(textbox_Amount.Text) ||
@@ -50,7 +51,7 @@ namespace MoneySplitterWinForm
             {
                 Id = Guid.NewGuid(),
                 Description = textbox_Description.Text,
-                Amount = ReturnAmount(textbox_Amount.Text),
+                Amount = returnDecimal.ReturnDecimalValue(textbox_Amount.Text),
                 DateOwed = time_DateOwed.Value.ToUniversalTime(),
                 DeadLine = time_DeadLine.Value.ToUniversalTime(),
                 IsPaid = btn_IsPaid.Checked,
@@ -66,17 +67,5 @@ namespace MoneySplitterWinForm
             _parentForm.LoadDebts();
         }
 
-        public decimal ReturnAmount(string stringAmount)
-        {
-            if (decimal.TryParse(stringAmount, out decimal result))
-            {
-                return result;
-            }
-            else
-            {
-                MessageBox.Show("В количество необходимо передавать число");
-                return 0;
-            }
-        }
     }
 }

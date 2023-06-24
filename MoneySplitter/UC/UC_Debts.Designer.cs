@@ -157,6 +157,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Debts";
             this.Size = new System.Drawing.Size(2499, 1195);
+            this.Load += new System.EventHandler(this.UC_Debts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
 

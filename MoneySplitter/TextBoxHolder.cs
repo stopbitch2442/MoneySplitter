@@ -44,7 +44,6 @@ namespace MoneySplitterWinForm
                 SetTextHolder();
             }
         }
-
         private void Textbox_Enter(object sender, EventArgs e)
         {
             if (_textBox.Text == _textHolder)

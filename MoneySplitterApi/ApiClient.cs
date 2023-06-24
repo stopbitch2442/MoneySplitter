@@ -1,5 +1,6 @@
 ﻿using MoneySplitterApi.Models;
 using Newtonsoft.Json;
+using NuGet.Packaging.Signing;
 using System;
 using System.Net.Http;
 using System.Text;
@@ -19,6 +20,10 @@ namespace MoneySplitterApi
             _httpClient.BaseAddress = new Uri(_baseUrl);
         }
 
+        /// <summary>
+        ///  Debts
+        /// </summary>
+        /// <returns></returns>
         public async Task<Debts[]> GetDebtsAsync()
         {
             var response = await _httpClient.GetAsync("Debts");
@@ -56,5 +61,32 @@ namespace MoneySplitterApi
         {
             return await _httpClient.DeleteAsync($"delete/{id}");
         }
+
+        /// <summary>
+        ///  Ledgers
+        /// </summary>
+        /// <returns></returns>
+        public async Task<Ledgers[]> GetLedgersAsync()
+        {
+            var response = await _httpClient.GetAsync("Ledgers");
+            response.EnsureSuccessStatusCode();
+
+            var content = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<Ledgers[]>(content);
+        }
+
+        public async Task<HttpResponseMessage> CreateLedgersAsync(Ledgers ledgers)
+        {
+            var serializedObject = JsonConvert.SerializeObject(ledgers);
+            var httpContent = new StringContent(serializedObject, Encoding.UTF8, "application/json");
+
+            return await _httpClient.PostAsync("Ledgers/create", httpContent);
+        }
+
+        public async Task<HttpResponseMessage> DeleteLedgersAsync(Guid id)
+        {
+            return await _httpClient.DeleteAsync($"Ledgers/delete/{id}");
+        }
+    
     }
 }

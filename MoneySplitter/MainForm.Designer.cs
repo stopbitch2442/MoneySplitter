@@ -37,7 +37,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Ldger = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Debt = new Guna.UI2.WinForms.Guna2Button();
             this.uC_Debts1 = new MoneySplitterWinForm.UC.UC_Debts();
             this.btn_Exit = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -48,7 +48,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.guna2Button2);
-            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.btn_Ldger);
             this.panel1.Controls.Add(this.btn_Debt);
             this.panel1.Location = new System.Drawing.Point(66, 12);
             this.panel1.Name = "panel1";
@@ -77,28 +77,28 @@
             this.guna2Button2.TabIndex = 2;
             this.guna2Button2.Text = "Долги";
             // 
-            // guna2Button1
+            // btn_Ldger
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2Button1.BorderRadius = 26;
-            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button1.CustomizableEdges = customizableEdges3;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button1.Location = new System.Drawing.Point(421, 22);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            this.guna2Button1.Size = new System.Drawing.Size(315, 105);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Приход/Расход";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btn_Ldger.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Ldger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_Ldger.BorderRadius = 26;
+            this.btn_Ldger.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_Ldger.CustomizableEdges = customizableEdges3;
+            this.btn_Ldger.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Ldger.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Ldger.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Ldger.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Ldger.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.btn_Ldger.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn_Ldger.ForeColor = System.Drawing.Color.White;
+            this.btn_Ldger.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_Ldger.Location = new System.Drawing.Point(421, 22);
+            this.btn_Ldger.Name = "btn_Ldger";
+            this.btn_Ldger.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            this.btn_Ldger.Size = new System.Drawing.Size(315, 105);
+            this.btn_Ldger.TabIndex = 1;
+            this.btn_Ldger.Text = "Приход/Расход";
+            this.btn_Ldger.Click += new System.EventHandler(this.btn_Ldger_Click);
             // 
             // btn_Debt
             // 
@@ -121,6 +121,7 @@
             this.btn_Debt.Size = new System.Drawing.Size(315, 105);
             this.btn_Debt.TabIndex = 0;
             this.btn_Debt.Text = "Долги";
+            this.btn_Debt.Click += new System.EventHandler(this.btn_Debt_Click);
             // 
             // uC_Debts1
             // 
@@ -156,7 +157,7 @@
             // 
             this.uC_Ledger1.BackColor = System.Drawing.Color.White;
             this.uC_Ledger1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.uC_Ledger1.Location = new System.Drawing.Point(342, 209);
+            this.uC_Ledger1.Location = new System.Drawing.Point(66, 190);
             this.uC_Ledger1.Margin = new System.Windows.Forms.Padding(4);
             this.uC_Ledger1.Name = "uC_Ledger1";
             this.uC_Ledger1.Size = new System.Drawing.Size(3124, 1494);
@@ -190,7 +191,7 @@
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btn_Debt;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_Ldger;
         private UC.UC_Debts uC_Debts1;
         private Guna.UI2.WinForms.Guna2CircleButton btn_Exit;
         private UC.UC_Ledger uC_Ledger1;
